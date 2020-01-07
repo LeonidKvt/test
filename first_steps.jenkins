@@ -12,19 +12,24 @@ pipeline {
         timestamps()
     }
     stages {
+
         stage("First step") {
             steps {
                 sh 'ssh root@ubs16-2 \'hostname\''
             }
         }
+
         stage("Second step") {
             steps {
                 sh 'ssh root@ubs16-2 \'uptime\''
             }
+        }
+
         stage("Third step") {
             steps {
                 sh 'ssh root@ubs16-2 \'ip a\''
             }
         }
+
     }
 }
