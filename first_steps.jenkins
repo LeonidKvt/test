@@ -27,7 +27,7 @@ pipeline {
 
         stage("Third step") {
             steps {
-                sh 'ssh root@ubs16-2 \'ip a\''
+                sh 'ssh root@ubs16-2 \'ip -f inet a\''
             }
         }
 
